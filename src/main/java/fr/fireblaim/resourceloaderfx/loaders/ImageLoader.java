@@ -5,6 +5,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -12,7 +13,7 @@ import java.io.IOException;
 
 public class ImageLoader {
 
-    public static void loadImage(String file, int posX, int posY, int width, int height, Pane root) {
+    public static void loadImage(String file, int posX, int posY, double width, double height, Pane root) {
         Image image = getImage(file);
         ImageView imageView = new ImageView(image);
 
@@ -26,14 +27,7 @@ public class ImageLoader {
 
     public static void loadImage(String file, int posX, int posY, Pane root) {
         Image image = getImage(file);
-        ImageView imageView = new ImageView(image);
-
-        imageView.setLayoutX(posX);
-        imageView.setLayoutY(posY);
-        imageView.setFitWidth(image.getWidth());
-        imageView.setFitHeight(image.getHeight());
-
-        root.getChildren().add(imageView);
+        loadImage(file, posX, posY, image.getWidth(), image.getHeight(), root);
     }
 
     public static Image getImage(String file) {

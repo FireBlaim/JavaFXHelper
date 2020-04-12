@@ -30,21 +30,7 @@ public class MediaLoader {
 
     public static void loadMedia(String file, int posX, int posY, Pane pane, boolean autoCycle) {
         Media media = getMedia(file);
-
-        MediaPlayer player = new MediaPlayer(media);
-        MediaView viewer = new MediaView(player);
-
-        viewer.setFitWidth(media.getWidth());
-        viewer.setFitHeight(media.getHeight());
-        viewer.setLayoutX(posX);
-        viewer.setLayoutY(posY);
-        viewer.setPreserveRatio(false);
-
-        player.setCycleCount(autoCycle ? -1 : 1);
-
-        player.play();
-
-        pane.getChildren().add(viewer);
+        loadMedia(file, posX, posY, media.getWidth(), media.getHeight(), pane, autoCycle);
     }
 
     public static Media getMedia(String file) {
