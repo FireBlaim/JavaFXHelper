@@ -21,4 +21,8 @@ public class JavaFXHelper {
     public static void setResourceLocation(String resourceLocation) {
         JavaFXHelper.resourceLocation = resourceLocation;
     }
+
+    public static int percentage(int value, int maximum) {
+        return (int) (value / maximum * 100);
+    }
 }
