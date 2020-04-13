@@ -1,6 +1,6 @@
-package fr.fireblaim.resourceloaderfx.loaders;
+package fr.fireblaim.javafxhelper.loaders;
 
-import fr.fireblaim.resourceloaderfx.ResourceLoaderFX;
+import fr.fireblaim.javafxhelper.JavaFXHelper;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -35,7 +35,7 @@ public class MediaLoader {
 
     public static Media getMedia(String file) {
         Media media = null;
-        URL resource = MediaLoader.class.getResource(ResourceLoaderFX.getResourceLocation() + file);
+        URL resource = MediaLoader.class.getResource(JavaFXHelper.getResourceLocation() + file);
         try {
             media = new Media(resource.toURI().toString());
         } catch (URISyntaxException e) {

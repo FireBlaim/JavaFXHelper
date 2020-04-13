@@ -1,11 +1,10 @@
-package fr.fireblaim.resourceloaderfx.loaders;
+package fr.fireblaim.javafxhelper.loaders;
 
-import fr.fireblaim.resourceloaderfx.ResourceLoaderFX;
+import fr.fireblaim.javafxhelper.JavaFXHelper;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.media.Media;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -33,7 +32,7 @@ public class ImageLoader {
     public static Image getImage(String file) {
         BufferedImage image = null;
         try {
-            image = ImageIO.read(ImageLoader.class.getResource(ResourceLoaderFX.getResourceLocation() + file));
+            image = ImageIO.read(ImageLoader.class.getResource(JavaFXHelper.getResourceLocation() + file));
         } catch (IOException ignored) {}
         return SwingFXUtils.toFXImage(image, null);
     }

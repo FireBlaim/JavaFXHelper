@@ -1,8 +1,8 @@
-package fr.fireblaim.resourceloaderfx;
+package fr.fireblaim.javafxhelper;
 
 import javax.swing.*;
 
-public class ResourceLoaderFX {
+public class JavaFXHelper {
 
     public static String resourceLocation = "";
 
@@ -19,6 +19,6 @@ public class ResourceLoaderFX {
     }
 
     public static void setResourceLocation(String resourceLocation) {
-        ResourceLoaderFX.resourceLocation = resourceLocation;
+        JavaFXHelper.resourceLocation = resourceLocation;
     }
 }
