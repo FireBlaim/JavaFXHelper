@@ -1,4 +1,4 @@
 # JavaFXHelper
-A Simple Library For Reading Files In JavaFX (video, image, font, etc...)
+A simple library to help when you make programs with JavaFX
 
-Une simple librairie pour lire des fichier dans javafx (vidéo, image, police, etc...)
+Une simple librairie pour aider lorsque vous faites des programmes avec JavaFX
