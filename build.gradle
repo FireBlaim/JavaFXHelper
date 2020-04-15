@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'fr.fireblaim.javafxhelper'
-version '0.1'
+version '0.3'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -14,4 +14,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    from ('src/test/java') {
+        exclude '*.java'
+    }
 }

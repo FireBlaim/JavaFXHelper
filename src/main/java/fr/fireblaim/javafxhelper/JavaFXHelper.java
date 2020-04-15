@@ -10,7 +10,7 @@ public class JavaFXHelper {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-            System.out.println("[ResourceLoaderFx] I can't setup the look and feel :( : " + e);
+            System.out.println("[JavaFXHelper] I can't setup the look and feel :( : " + e);
         }
     }
 
@@ -25,4 +25,5 @@ public class JavaFXHelper {
     public static int percentage(int value, int maximum) {
         return (int) (value / maximum * 100);
     }
+
 }

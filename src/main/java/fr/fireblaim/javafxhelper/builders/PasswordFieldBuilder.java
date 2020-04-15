@@ -1,7 +1,11 @@
 package fr.fireblaim.javafxhelper.builders;
 
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.control.PasswordField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 
 public class PasswordFieldBuilder extends PasswordField {
@@ -19,6 +23,41 @@ public class PasswordFieldBuilder extends PasswordField {
         setLayoutY(posY);
         setPrefSize(width, height);
         setFont(font);
+
+        pane.getChildren().add(this);
+    }
+
+    public PasswordFieldBuilder(Pane pane, Priority priority, VPos vpos, HPos hpos) {
+        GridPane.setHgrow(this, priority);
+        GridPane.setVgrow(this, priority);
+
+        GridPane.setHalignment(this, hpos);
+        GridPane.setValignment(this, vpos);
+
+        pane.getChildren().add(this);
+    }
+
+    public PasswordFieldBuilder(Pane pane, Priority priority, HPos hpos) {
+        GridPane.setHgrow(this, priority);
+        GridPane.setVgrow(this, priority);
+
+        GridPane.setHalignment(this, hpos);
+
+        pane.getChildren().add(this);
+    }
+
+    public PasswordFieldBuilder(Pane pane, Priority priority, VPos vpos) {
+        GridPane.setHgrow(this, priority);
+        GridPane.setVgrow(this, priority);
+
+        GridPane.setValignment(this, vpos);
+
+        pane.getChildren().add(this);
+    }
+
+    public PasswordFieldBuilder(Pane pane, Priority priority) {
+        GridPane.setHgrow(this, priority);
+        GridPane.setVgrow(this, priority);
 
         pane.getChildren().add(this);
     }
